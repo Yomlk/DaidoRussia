@@ -1,7 +1,57 @@
-.header{
-height: 150px;
+header{
+height: 100px;
+display: flex;
+}
+.hamburger{
+    display: none;
+}
+.First-header{
+    max-width: 1400px;
+    height: 100px;
+    padding: 0 !important;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    margin: auto;
+}
+.row{
+    max-width: 1400px;
+    height: 100px;
 }
 .logo{
+    
     display: flex;
     align-items: center;
+    
+}
+.imglogo{
+    max-width: 100px;
+}
+.nav{
+    align-items: center;
+    display: flex;
+    padding: 0 !important;
+}
+.nav-item{
+    display: flex;
+    column-gap: 40px;
+    padding: 0;
+    margin: 0;
+    
+}
+li{
+    list-style-type: none;
+    font-family: Roboto-Regular;
+    font-size: 20px;
+}
+.country{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: right;
+    
+    
+}
+.icon{
+    max-width: 64px;
+    max-height: 64px;
 }
