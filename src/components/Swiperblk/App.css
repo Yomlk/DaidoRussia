@@ -15,16 +15,37 @@ body {
 }
 
 .swiper {
-  width: 100%;
+  width: 1400px;
   height: 100%;
+  
+  
 }
+
+
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
+  
+}
+.slide{
+  height: 500px;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
+
+.text{
+  max-width: 470px;
+  min-height: 141px;
+  font-size: 40px;
+  font-family: Roboto-Medium;
+  margin-top: 100px;
 }
+.imyge{
+  width: 598px !important;
+  height: 463px;
+}
+.kamaz{
+  justify-content: right;
+  display: flex;
+}
+
