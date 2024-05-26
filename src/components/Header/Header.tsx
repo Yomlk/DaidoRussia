@@ -1,11 +1,11 @@
-import './style.css'
+import classes from './style.module.scss'
 
 export default function Header() {
     return(
         <>
     <header>
-        <div className="container-fluid First-header">
-            <div className="row">
+        <div className= "container-fluid First-header">
+            <div className="row header-row">
                 <div className="hamburger">
                     <div className="hamburger-menu">
                         <input id="menu__toggle" type="checkbox" />
@@ -14,10 +14,10 @@ export default function Header() {
                         </label>
 
                         <ul className="menu__box">
-                         <li><a className="menu__item" href="#">Home</a></li>
-                         <li><a className="menu__item" href="#">About</a></li>
-                         <li><a className="menu__item" href="#">Team</a></li>
-                         <li><a className="menu__item" href="#">Contact</a></li>
+                         <li><a className="menu__item" href="#">О компании</a></li>
+                         <li><a className="menu__item" href="#">Продукция</a></li>
+                         <li><a className="menu__item" href="#">Проверка подлинности</a></li>
+                         <li><a className="menu__item" href="#">Контакты</a></li>
                          
                         </ul>
                     </div>
