@@ -1,25 +1,43 @@
-<Swiper
-        spaceBetween={30}
-        effect={'fade'}
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import './Swiper.scss'
+
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+interface Slide{
+  image:string;
+  text:string;
+}
+interface SliderProps {
+  slides: Slide[];
+}
+
+const Slider: React.FC<SliderProps> = ({ slides }) => {
+  return (
+    <div className="slider-container">
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
         
-        pagination={{
-          clickable: true,
-        }}
-        modules={[EffectFade, Pagination]}
-        className="mySwiper"
       >
-        {Data.map((result,index)=>(
-          <SwiperSlide key={index} className='row slide'>
-            <div className='col-xxl-4 col-xl-4 col-lg-4'>
-              <p className='text'>{result.title}</p>
-              
-              
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="slide">
+              <p className="Text">{slide.text}</p>
+              <img src={slide.image} alt={`Slide ${index}`} />
             </div>
-            <div className='col-xxl-8 col-xl-5 col-lg-5 kamaz'><img className='imyge' src={result.img} /></div>
-          
-          
-          
-        </SwiperSlide>
+          </SwiperSlide>
         ))}
-        
       </Swiper>
+    </div>
+  );
+};
+
+export default Slider;

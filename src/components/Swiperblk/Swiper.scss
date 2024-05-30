@@ -1,0 +1,25 @@
+.slider-container {
+    width: 100%;
+    max-width:1400px;
+    margin: auto;
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+    
+  }
+  
+  .slide img {
+    width: 572px;
+    height: 463px;
+  }
+  
+  
+  .Text{
+    
+    max-width: 453px !important;
+  }
+  

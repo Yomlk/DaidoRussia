@@ -1,13 +1,15 @@
-import classes from './style.module.scss'
+import './style.scss'
+
+import './media.scss'
 
 export default function Header() {
     return(
         <>
     <header>
-        <div className= "container-fluid First-header">
-            <div className="row header-row">
+        <div className= "container-fluid FirstHeader">
+            <div className="row headerrow">
                 <div className="hamburger">
-                    <div className="hamburger-menu">
+                    <div className="hamburgerMenu">
                         <input id="menu__toggle" type="checkbox" />
                         <label className="menu__btn" htmlFor="menu__toggle">
                          <span></span>
@@ -28,7 +30,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="col-xxl-6 col-xl-8 col-lg-8 nav">
-                   <ul className='nav-item'>
+                   <ul className='navitem'>
                      <li>О компании</li>
                      <li>Продукция</li>
                      <li>Проверка подлинности</li>

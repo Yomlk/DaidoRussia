@@ -1,11 +1,12 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
 header{
 height: 100px;
 display: flex;
 }
 .hamburger{
-    display: none;
+display: none;
 }
-.First-header{
+.FirstHeader{
     max-width: 1400px;
     height: 100px;
     padding: 0 !important;
@@ -13,15 +14,13 @@ display: flex;
     gap: 20px;
     margin: auto;
 }
-.header-row{
+.headerrow{
     max-width: 1400px;
     height: 100px;
 }
 .logo{
-    
-    display: flex;
-    align-items: center;
-    
+display: flex;
+align-items: center;
 }
 .imglogo{
     max-width: 100px;
@@ -31,7 +30,7 @@ display: flex;
     display: flex;
     padding: 0 !important;
 }
-.nav-item{
+.navitem{
     display: flex;
     column-gap: 40px;
     padding: 0;
