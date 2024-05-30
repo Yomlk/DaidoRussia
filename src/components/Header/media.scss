@@ -1,5 +1,7 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
 @media screen and (min-width: 363px) and (max-width: 991px) {
-.row{
+
+  .row{
     display: flex !important;
     justify-content: space-between;
 }
@@ -29,7 +31,7 @@
     justify-content:left;
     align-items: center;
 }
-.hamburger-menu{
+.hamburgerMenu{
     display: flex;
     
     max-height: 100px !important;
@@ -153,7 +155,7 @@ padding: 20px;
     align-items: center;
     
 }
-.hamburger-menu{
+.hamburgerMenu{
     display: flex;
     
     max-height: 100px !important;
