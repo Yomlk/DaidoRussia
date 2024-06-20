@@ -1,56 +1,117 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-header{
-height: 100px;
-display: flex;
+
+.header{
+    border-bottom: 2px solid #DBDFEC;
+    background-color: white;
+    
 }
-.hamburger{
-display: none;
-}
-.FirstHeader{
-    max-width: 1400px;
+.headerBlk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 100px;
-    padding: 0 !important;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
+    max-width: 1400px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
     margin: auto;
+ 
+  }
+  
+  .logo img {
+    height: 69px;
+    width: 100px;
+    
+  }
+  
+  .NameCompanyText{
+    text-align: center; 
+    margin: 0; 
+    font-family: Roboto-Bold;
+    font-size: 26px;
+    color: #003466;
 }
-.headerrow{
-    max-width: 1400px;
-    height: 100px;
-}
-.logo{
-display: flex;
-align-items: center;
-}
-.imglogo{
-    max-width: 100px;
-}
-.nav{
-    align-items: center;
+  
+  .nav-menu ul {
     display: flex;
-    padding: 0 !important;
-}
-.navitem{
-    display: flex;
-    column-gap: 40px;
-    padding: 0;
+    list-style: none;
     margin: 0;
-    
-}
-li{
-    list-style-type: none;
-    font-family: Roboto-Regular;
+    padding: 0;
+    :hover{
+        color: #2189EA;
+        text-decoration: underline;
+    }
+  }
+  
+  .nav-menu li {
+    margin: 0 20px;
+    cursor: pointer;
+    font-family: Roboto-regular;
     font-size: 20px;
-}
-.country{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: right;
+    
+  }
+  
+  .buttons button {
     
     
-}
-.icon{
-    max-width: 64px;
-    max-height: 64px;
-}
+    cursor: pointer;
+  }
+  .image-button{
+    background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+  }
+ 
+  
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .burger-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #003466;
+    margin: 4px 0;
+  }
+  
+  /* Media Query for mobile view */
+  @media (max-width: 1270px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 102px;
+        left: 0;
+        width: 100%;
+        background-color:white ;
+        z-index: 1000;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    }
+  
+    .nav-menu.open {
+        max-height: 300px; /* Достаточно большое значение, чтобы вместить все элементы меню */
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+    }
+  
+    .nav-menu li {
+      margin: 5px 0;
+      text-align: center;
+    }
+  
+    .burger-menu {
+      display: flex;
+    }
+  }
+  

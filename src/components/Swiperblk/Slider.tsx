@@ -4,15 +4,15 @@ import Swiper from './Swiper';
 const App: React.FC = () => {
   const slides = [
     {
-        image:'src/components/Swiperblk/img/vtulki.png',
+        image:'src/components/Swiperblk/img/slide1.png',
         text: 'Втулки верхней головки шатуна для двигателей КАМАЗ'
     },
     {
-        image:'https://via.placeholder.com/600x400?text=Slide+2',
+        image:'src/components/Swiperblk/img/slide2.png',
         text: 'Втулки верхней головки шатуна для двигателей ММЗ'
     },
     {
-        image:'https://via.placeholder.com/600x400?text=Slide+3',
+        image:'src/components/Swiperblk/img/slide3.png',
         text: 'Коренные и шатунные вкладыши для двигаталей КАМАЗ'
     }
     
@@ -29,6 +29,7 @@ const App: React.FC = () => {
     <div className="App">
       
       <Swiper slides={slides}/>
+      
     </div>
   );
 };

@@ -1,52 +1,89 @@
-import './style.scss'
+import React, { useState, useEffect } from 'react';
+import './media.scss';
+import './style.scss';
 
-import './media.scss'
 
-export default function Header() {
-    return(
-        <>
-    <header>
-        <div className= "container-fluid FirstHeader">
-            <div className="row headerrow">
-                <div className="hamburger">
-                    <div className="hamburgerMenu">
-                        <input id="menu__toggle" type="checkbox" />
-                        <label className="menu__btn" htmlFor="menu__toggle">
-                         <span></span>
-                        </label>
-
-                        <ul className="menu__box">
-                         <li><a className="menu__item" href="#">О компании</a></li>
-                         <li><a className="menu__item" href="#">Продукция</a></li>
-                         <li><a className="menu__item" href="#">Проверка подлинности</a></li>
-                         <li><a className="menu__item" href="#">Контакты</a></li>
-                         
-                        </ul>
-                    </div>
-                </div>
-                <div className="col-xxl-2 col-xl-2 col-lg-2 logo">
-                    <div className="log">
-                     <img src="./src/components/Header/img/image 1.png" className='imglogo'/>
-                    </div>
-                </div>
-                <div className="col-xxl-6 col-xl-8 col-lg-8 nav">
-                   <ul className='navitem'>
-                     <li>О компании</li>
-                     <li>Продукция</li>
-                     <li>Проверка подлинности</li>
-                     <li>Контакты</li>
-                    </ul>
-                </div>
-                <div className="col-xxl-4 col-xl-2 col-lg-2 country">
-                  <img src="./src/components/Header/img/rus.svg" className='icon' />
-                  <img src="./src/components/Header/img/usa.svg" className='icon' />
-                </div>
-            </div>
-           
-        </div>
-        
-    </header>
-    </>
-    )
-    
+interface HeaderProps {
+  logo: string;
+  nameCompany: string;
+  navItems: string[];
+  button1Image: string;
+  button2Image: string;
 }
+
+const Header: React.FC<HeaderProps> = ({
+  logo,
+  nameCompany,
+  navItems,
+  button1Image,
+  button2Image,
+}) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 500);
+  const [currentButtonImage, setCurrentButtonImage] = useState(button1Image);
+
+ 
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 500);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleButtonImage = () => {
+    if (isSmallScreen) {
+      setCurrentButtonImage(currentButtonImage === button1Image ? button2Image : button1Image);
+    }
+  };
+
+  return (
+    <header className="header">
+      <div className="headerBlk">
+        <div className="burger-menu" onClick={toggleMenu}>
+          <div className="burger-bar"></div>
+          <div className="burger-bar"></div>
+          <div className="burger-bar"></div>
+        </div>
+        <div className="logo">
+          <img src={logo} alt="Logo" />
+        </div>
+        <div className="NameCompany">
+          <p className="NameCompanyText">{nameCompany}</p>
+        </div>
+        <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+          <ul>
+            {navItems.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </nav>
+        <div className="buttons">
+          <button className="image-button" onClick={toggleButtonImage}>
+            <img src={currentButtonImage} alt="Button Image" />
+          </button>
+          {isSmallScreen && (
+            <button className="image-button hide-on-small-screen">
+              <img src={button2Image} alt="Button 2" />
+            </button>
+          )}
+          <button className="image-button hide-on-small-screen">
+            <img src={button2Image} alt="Button 1" />
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+

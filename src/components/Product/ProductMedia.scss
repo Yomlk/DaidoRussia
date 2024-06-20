@@ -1,0 +1,34 @@
+@media screen and (min-width: 50px) and (max-width: 991px) {
+    .Product{
+        height: auto;
+    }
+    .ProductContainer{
+        flex-direction: column;
+        
+        
+    }
+    .ProductList{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .image{
+        max-width: 100%;
+        margin: auto;
+    }
+    .ProductText{
+        margin-bottom: 30px;
+    }
+    .ProductMainText{
+        margin-top: 40px;
+    }
+    .ProductButton{
+        margin-bottom: 40px;
+        
+    }
+}
+@media screen and (min-width: 50px) and (max-width: 356px) {
+    .ProductMainText{
+        text-align: center;
+    }
+}
