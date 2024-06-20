@@ -1,0 +1,90 @@
+
+.BlkVideo{
+    max-width: 1400px;
+    height: 600px;
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
+    align-items: center !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+   
+}
+.video-view{
+    position: relative;
+    width: 572px;
+    height: 414px;
+    
+    
+    
+
+}
+.video-view .video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #ccc;
+  }
+  .video-view .video-content {
+    position: absolute;
+    top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+  }
+  .PlayButton{
+    width: 70px;
+    height:70px;
+    border: none;
+    background-image: url('./img/playbtn.png');
+    background-size: 100% 100%;
+    border-radius: 50%;
+  }
+  .Text{
+    max-width: 690px;
+    height: 315px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 0;
+  }
+  .About{
+    font-family: Roboto-Medium;
+    font-size: 40px;
+    margin-bottom: 0;
+    
+  }
+  .AboutText{
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    margin-bottom: 0;
+    height: 52px;
+    
+  }
+  .AboutTextBot{
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    height: 156px;
+    margin-bottom: 0;
+  }
+  .Bold{
+    font-family: Roboto-Medium;
+  }
+  
+.VideoBtn{
+  justify-content: right;
+  display: flex;
+  margin-right: 74px;
+  
+  :hover{
+    background-color:#1B49C0;
+    border-radius: 15px;
+    border: none;
+  }
+ 
+}
+.RightSide{
+  padding-left: 20px;
+  
+}

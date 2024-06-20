@@ -1,0 +1,60 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.Product{
+    height: 600px;
+    max-width: 1400px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: content-box !important;
+}
+.ProductContainer{
+    display: flex;
+    margin: auto;
+    
+    column-gap: 20px;
+    max-width: 1400px;
+    
+    
+    
+    
+}
+.ProductText{
+    font-family:Roboto-Regular ;
+    font-size: 20px;
+    margin-top:20px;
+    margin-bottom: 60px;
+    justify-content: center;
+    display: flex;
+    
+}
+.ProductButton{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    :hover{
+        background-color:#1B49C0 ;
+    }
+}
+.image{
+    max-width: 100%;
+    height: auto;
+    box-sizing: content-box;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+    
+}
+.ProductMainBlk{
+display: flex;
+justify-content: center;
+}
+.ProductMainText{
+    font-family:Roboto-Medium ;
+    font-size: 40px;
+}
+
+
