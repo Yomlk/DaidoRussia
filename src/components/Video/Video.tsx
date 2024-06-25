@@ -1,11 +1,13 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from "react";
 import VideoButton from "../Buttons/VideoButton";
+
 import "./Video.scss";
 import "./media.scss";
 
-export default function Video() {
+const Video = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [buttonVisible, setButtonVisible] = useState(true);
+  const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
     const handlePlay = () => setButtonVisible(false);
@@ -13,14 +15,14 @@ export default function Video() {
 
     const videoElement = videoRef.current;
     if (videoElement) {
-      videoElement.addEventListener('play', handlePlay);
-      videoElement.addEventListener('pause', handlePause);
+      videoElement.addEventListener("play", handlePlay);
+      videoElement.addEventListener("pause", handlePause);
     }
 
     return () => {
       if (videoElement) {
-        videoElement.removeEventListener('play', handlePlay);
-        videoElement.removeEventListener('pause', handlePause);
+        videoElement.removeEventListener("play", handlePlay);
+        videoElement.removeEventListener("pause", handlePause);
       }
     };
   }, []);
@@ -48,13 +50,20 @@ export default function Video() {
           width="100%"
         >
           <p>
-            Ваш браузер не поддерживает встроенные видео. Попробуйте посмотреть его по
-            <a href="http://daidorussia.ru/data/pages/video/files/v2.2%20RUS.mp4">этой ссылке</a>.
+            Ваш браузер не поддерживает встроенные видео. Попробуйте посмотреть
+            его по
+            <a href="http://daidorussia.ru/data/pages/video/files/v2.2%20RUS.mp4">
+              этой ссылке
+            </a>
+            .
           </p>
         </video>
         <div className="video-content">
           {buttonVisible && (
-            <button className="PlayButton" onClick={handlePlayButtonClick}></button>
+            <button
+              className="PlayButton"
+              onClick={handlePlayButtonClick}
+            ></button>
           )}
         </div>
       </div>
@@ -62,22 +71,52 @@ export default function Video() {
         <div className="Text">
           <h2 className="About">О компании</h2>
           <p className="AboutText">
-            <span className="Bold">ООО «Дайдо Металл Русь»</span> - крупнейший поставщик подшипников скольжения для сборочных конвейеров в России и странах СНГ.
+            <span className="Bold">ООО «Дайдо Металл Русь»</span> - крупнейший
+            поставщик подшипников скольжения для сборочных конвейеров в России и
+            странах СНГ.
           </p>
           <p className="AboutTextBot">
-            Наличие полного цикла производства и высокотехнологичного оборудования позволяет выпускать широкий ассортимент продукции для бензиновых, дизельных двигателей и компрессоров:
+            Наличие полного цикла производства и высокотехнологичного
+            оборудования позволяет выпускать широкий ассортимент продукции для
+            бензиновых, дизельных двигателей и компрессоров:
             <br />
             - коренные и шатунные вкладыши;
             <br />
             - упорные полукольца;
-            <br />
-            - втулки.
+            <br />- втулки.
           </p>
         </div>
         <div className="VideoBtn">
-          <div><VideoButton /></div>
+          <div className="drop">
+            <div className="menu-button" onClick={() => setOpen(!isOpen)}>
+              <VideoButton />
+            </div>
+            <div className={`menu ${isOpen ? "active" : ""}`}>
+              <div className="menu__list">
+                <p className="menu__item">
+                  История предприятия началась в 1959 году когда в составе
+                  «Заволжского моторного завода» было начато производство
+                  подшипников скольжения. В 2003 году на базе производства было
+                  создано ООО «ЗМЗ-Подшипники скольжения», тем самым "Заволжский
+                  моторный завод" (ЗМЗ) полностью утратил возможность
+                  производства биметаллической ленты и вкладышей. В 2007 году
+                  предприятие перешло в собственность компании "Daido Metal Co.,
+                  LTD, Япония и получило новое название ООО «Дайдо Металл Русь».
+                  Исследовательская и испытательная база, японская система
+                  управления и новейшее оборудование позволяют выпускать
+                  ЗАВОЛЖСКИЕ ВКЛАДЫШИ стабильно высокого качества, удовлетворять
+                  все новые потребности рынка, гарантируя БЕЗУПРЕЧНОСТЬ В
+                  ИСПОЛНЕНИИ всей производимой номенклатуры. Система управления
+                  предприятием сертифицирована на соответствие IATF 16949, ISO
+                  9001 и ГОСТ Р ИСО 14001:2007.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default Video;

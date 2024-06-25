@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import './media.scss';
-import './style.scss';
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import "./media.scss";
+import "./style.scss";
+import LanguageSelector from "../languages/languageselector";
+
 
 
 interface HeaderProps {
@@ -21,18 +24,18 @@ const Header: React.FC<HeaderProps> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 500);
   const [currentButtonImage, setCurrentButtonImage] = useState(button1Image);
-
  
+  
 
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 500);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -42,12 +45,26 @@ const Header: React.FC<HeaderProps> = ({
 
   const toggleButtonImage = () => {
     if (isSmallScreen) {
-      setCurrentButtonImage(currentButtonImage === button1Image ? button2Image : button1Image);
+      setCurrentButtonImage(
+        currentButtonImage === button1Image ? button2Image : button1Image,
+      );
     }
   };
 
+  const handleNavClick = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+  
+  const {t} = useTranslation();
+ 
+
   return (
     <header className="header">
+      
       <div className="headerBlk">
         <div className="burger-menu" onClick={toggleMenu}>
           <div className="burger-bar"></div>
@@ -58,32 +75,29 @@ const Header: React.FC<HeaderProps> = ({
           <img src={logo} alt="Logo" />
         </div>
         <div className="NameCompany">
-          <p className="NameCompanyText">{nameCompany}</p>
+            
+          <p className="NameCompanyText">{t("namecompany")}</p>
         </div>
-        <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+        <nav className={`nav-menu ${isMenuOpen ? "open" : ""}`}>
           <ul>
             {navItems.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index} onClick={() => handleNavClick(item.toLowerCase())}>
+                
+                {item}</li>
             ))}
           </ul>
         </nav>
         <div className="buttons">
-          <button className="image-button" onClick={toggleButtonImage}>
-            <img src={currentButtonImage} alt="Button Image" />
+          <button className="image-button">
+          <LanguageSelector />
           </button>
-          {isSmallScreen && (
-            <button className="image-button hide-on-small-screen">
-              <img src={button2Image} alt="Button 2" />
-            </button>
-          )}
-          <button className="image-button hide-on-small-screen">
-            <img src={button2Image} alt="Button 1" />
-          </button>
+          
+          
         </div>
       </div>
+      
     </header>
   );
 };
 
 export default Header;
-

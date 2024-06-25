@@ -1,6 +1,9 @@
-export {default as Header} from "./Header/Header";
-export {default as Slider} from "./Swiperblk/Slider";
-export {default as Video} from "./Video/Video"
-export {default as Product} from "./Product/Product"
-export {default as Check} from "./Check/Check"
-
+export { default as Header } from "./Header/Header";
+export { default as Slider } from "./Swiperblk/Slider";
+export { default as Video } from "./Video/Video";
+export { default as Product } from "./Product/Product";
+export { default as Check } from "./Check/Check";
+export { default as Form } from "./Form/Form";
+export { default as FormBlk } from "./Form/Formblk";
+export { default as Map } from "./Map/Map";
+export { default as Footer } from "./Footer/Footer";

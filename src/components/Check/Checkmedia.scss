@@ -1,0 +1,31 @@
+@media screen and (min-width: 20px) and (max-width: 991px) {
+    .CheckCards{
+        flex-direction: column;
+        
+    }
+    .Card1{
+       margin: auto;
+       max-width: 100%;
+       height: auto;
+       
+    }
+    .HeadText{
+        text-align: center;
+    }
+    .StickerImg{
+        max-width: 100%;
+    }
+    .CardAboutText{
+     font-size: 16px;
+     
+     height: auto;
+     
+    }
+    .CardAbout{
+        height: auto;
+
+    }
+    .Check{
+        height: auto;
+    }
+}

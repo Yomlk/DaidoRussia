@@ -3,9 +3,9 @@
     height: 1112px;
     max-width: 1400px;
     margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: content-box !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box !important;
 }
 .Head{
     display: flex;
@@ -29,6 +29,7 @@
     font-size: 20px;
     text-align: center;
     margin-bottom: 40px;
+    line-height: 23px;
 }
 .CheckTextBold{
     font-family:Roboto-Medium ;
@@ -73,25 +74,35 @@
 .CardButton{
     display: flex;
     justify-content: center;
-    :hover{
-        background-color: #0C48BA;
-    }
+   
+}
+.CardAbout{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .CardAboutHead{
     display: flex;
     justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .CardAboutHeadText{
     font-family:Roboto-Medium ;
     font-size: 24px;
     margin-top: 30px;
     margin-bottom: 5px;
+    text-align: center;
 }
 .CardAboutAdd{
-    display: flex;
+    max-width: 460px;
+    margin: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }
 .CardAboutText{
     margin-top: 5px;
@@ -100,5 +111,7 @@
     font-size: 20px;
     line-height: 23px;
     width: 325.25px;
+   
+    
     
 }

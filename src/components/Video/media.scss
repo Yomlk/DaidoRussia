@@ -27,6 +27,9 @@
         justify-content: center;
         margin: 0;
     }
+    .menu{
+        top: 1080px;
+    }
 }
 @media screen and (min-width: 130px) and (max-width: 500px) {
     .BlkVideo{
@@ -69,5 +72,39 @@
     }
     .AboutTextBot{
         height: auto;
+    }
+    .menu{
+        top: 1110px;
+    }
+}
+
+@media screen and (min-width: 408px) and (max-width: 462px) {
+    .menu{
+        top: 1140px;
+    }
+}
+@media screen and (min-width: 382px) and (max-width: 408px) {
+    .menu{
+        top: 1160px;
+    }
+}
+@media screen and (min-width: 380px) and (max-width: 382px) {
+    .menu{
+        top: 1190px;
+    }
+}
+@media screen and (min-width: 365px) and (max-width: 380px) {
+    .menu{
+        top: 1220px;
+    }
+}
+@media screen and (min-width: 362px) and (max-width: 365px) {
+    .menu{
+        top: 1245px;
+    }
+}
+@media screen and (min-width: 130px) and (max-width: 363px) {
+    .menu{
+        top: 1270px;
     }
 }

@@ -1,8 +1,15 @@
-import classes from './stylebuttons.module.scss'
-export default function ProductButton() {
-    return(
-        <>
-        <button className={classes.buttonvideo}><span className={classes.TextButtonVideo}>Вся продукция</span></button>
-        </>
-    )
+import classes from "./stylebuttons.module.scss";
+interface ProductButtonProps {
+  onClick?: () => void;
 }
+const ProductButton : React.FC<ProductButtonProps> = ({ onClick }) => {
+  return (
+    <>
+      <button className={classes.buttonvideo} onClick={onClick}>
+        <span className={classes.TextButtonVideo}>Вся продукция</span>
+      </button>
+    </>
+  );
+}
+
+export default ProductButton;

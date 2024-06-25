@@ -1,11 +1,15 @@
-import classes from './stylebuttons.module.scss'
-
-export default function ButtonFirst() {
-    return(
-        <>
-         <button className={classes.buttonslide}><span className={classes.TextButton}>В каталог</span></button>
-        </>
-         
-    )
-    
+import classes from "./stylebuttons.module.scss";
+interface ButtonFirstProps {
+  onClick?: () => void;
 }
+const ButtonFirst: React.FC<ButtonFirstProps> = ({ onClick })  => {
+  return (
+    <>
+      <button className={classes.buttonslide} onClick={onClick}>
+        <span className={classes.TextButton}>В каталог</span>
+      </button>
+    </>
+  );
+}
+
+export default ButtonFirst;

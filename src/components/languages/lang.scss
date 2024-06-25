@@ -1,0 +1,19 @@
+.btn-container{
+display: flex;
+gap: 20px;
+
+}
+.selected{
+    background: none;
+    border: none;
+   
+    cursor: pointer;
+    padding: 0;
+    
+}
+.current{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}

@@ -1,12 +1,12 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+
 
 .Product{
     height: 600px;
     max-width: 1400px;
     margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: content-box !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box !important;
 }
 .ProductContainer{
     display: flex;
@@ -32,9 +32,7 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    :hover{
-        background-color:#1B49C0 ;
-    }
+    
 }
 .image{
     max-width: 100%;

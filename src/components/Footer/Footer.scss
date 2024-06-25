@@ -1,0 +1,45 @@
+.footBlk{
+  max-width: 1400px;
+  margin: auto;
+  height: 284px;
+  box-sizing: content-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.firstfooter{
+    display: flex;
+    justify-content: space-between;
+}
+.secondfooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logotext{
+    display: flex;
+    width: 358.58px;
+    justify-content: space-between;
+
+}
+.BoldFooter{
+    font-family: Roboto-Medium;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.regFooter{
+    font-family: Roboto-regular;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+}
+.textFoot{
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+.textFootPrivacy{
+    margin: 0;
+    font-size: 12px;
+    font-family: Roboto-regular;
+}

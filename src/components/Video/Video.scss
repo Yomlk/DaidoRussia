@@ -77,14 +77,90 @@
   display: flex;
   margin-right: 74px;
   
-  :hover{
-    background-color:#1B49C0;
-    border-radius: 15px;
-    border: none;
-  }
+  
+  
  
 }
 .RightSide{
   padding-left: 20px;
   
+}
+
+
+
+
+
+.butttt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #2e41ec;
+}
+
+.menu-button {
+  padding: 0 !important;
+  border: none !important;
+  margin-bottom: 0;
+}
+
+
+
+.menu {
+  position: absolute;
+  top: 1120px; /* Положение по вертикали (можно настроить по вашему желанию) */
+  left: 50%; /* Размещаем элемент относительно центра */
+  width: 100%;
+  max-width: 1380px; /* Максимальная ширина блока */
+  max-height: 1460px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #5284E4;
+  border-radius: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  transform: translateX(-50%); 
+  box-sizing: border-box;
+  
+}
+
+
+.menu.active {
+  transform: translateY(0);
+  transform: translateX(-50%);
+  opacity: 1;
+  visibility: visible;
+  box-sizing: border-box;
+}
+
+
+
+.menu__list {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu__item {
+  display: flex;
+  text-align: justify;
+  font-size: 18px;
+  text-indent:30px;
+  font-family: Roboto-regular;
+  
+}
+
+.menu__item:nth-child(n + 2) {
+  margin-top: 15px;
+}
+
+.icon {
+  margin-right: 15px;
+  font-size: 24px;
+  color: inherit;
 }

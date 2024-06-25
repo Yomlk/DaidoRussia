@@ -1,0 +1,16 @@
+@media screen and (min-width: 20px) and (max-width: 531px) {
+   
+    .form-input {
+       width: 100% !important;
+      padding: 15px; /* Поля вокруг текста внутри поля ввода */
+      font-size: 14px; /* Размер шрифта */
+      border: 1px solid black; /* Обводка поля ввода */
+      border-radius: 8px; /* Закругление углов поля ввода */
+      transition: border-color 0.3s ease; /* Плавный переход цвета обводки */
+      outline: none;
+      box-sizing: border-box;
+      }
+     
+     
+  
+  }
