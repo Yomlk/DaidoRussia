@@ -5,9 +5,9 @@ const MapYan = () => {
   return (
     <>
       <YMaps>
-        <section>
+        <section className="Mapsection">
           <div className="mapblk">
-            <h2 className="MapText">Где нас найти</h2>
+            <div className="MapBlkText"><h2 className="MapText">Наше местоположение</h2></div>
           </div>
           <Map
             className="Mapp"

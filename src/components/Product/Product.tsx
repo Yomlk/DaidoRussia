@@ -19,7 +19,7 @@ const Product: React.FC = () => {
       text: "Lada Vesta",
     },
     {
-      imageUrl: "./src/components/Product/img/GAZ.png",
+      imageUrl: "./src/components/Product/img/GAZNEXT.svg",
       text: "ГАЗель Next",
     },
     {
@@ -37,7 +37,8 @@ const Product: React.FC = () => {
     window.open(pdfUrl, '_blank'); 
   };
   return (
-    <section className="Product">
+    <section className="productsection">
+    <div className="Product">
       <div className="ProductMainBlk">
         <p className="ProductMainText">Наша продукция</p>
       </div>
@@ -53,6 +54,7 @@ const Product: React.FC = () => {
       <div className="ProductButton">
         <ProductButton onClick={handleButtonClick}/>
       </div>
+    </div>
     </section>
   );
 };

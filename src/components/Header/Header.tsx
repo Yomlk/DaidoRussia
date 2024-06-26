@@ -16,14 +16,13 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({
   logo,
-  nameCompany,
+  
   navItems,
-  button1Image,
-  button2Image,
+  
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 500);
-  const [currentButtonImage, setCurrentButtonImage] = useState(button1Image);
+  const [, setIsSmallScreen] = useState(window.innerWidth < 500);
+  
  
   
 
@@ -43,13 +42,6 @@ const Header: React.FC<HeaderProps> = ({
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleButtonImage = () => {
-    if (isSmallScreen) {
-      setCurrentButtonImage(
-        currentButtonImage === button1Image ? button2Image : button1Image,
-      );
-    }
-  };
 
   const handleNavClick = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -83,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({
             {navItems.map((item, index) => (
               <li key={index} onClick={() => handleNavClick(item.toLowerCase())}>
                 
-                {item}</li>
+                {t(`nav.${item.toLowerCase()}`)}</li>
             ))}
           </ul>
         </nav>

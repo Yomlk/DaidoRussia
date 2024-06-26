@@ -77,7 +77,7 @@ const Form: React.FC = () => {
     }
     try {
       const response = await axios.post("/api/submit", formData);
-      setResponseMessage(`Success: ${response.data.message}`);
+      setResponseMessage(`Форма успешна отправлена: ${response.data.message}`);
     } catch (error: any) {
       console.error("Error during form submission:", error);
       setResponseMessage(
@@ -176,10 +176,10 @@ const Form: React.FC = () => {
           placeholder="Введите сообщение..."
         />
       </div>
-      <div className="form-group">
-        <FormButton />
+      <div className="form-btn">
+        <div className="btnform"><FormButton /></div>
       </div>
-      {responseMessage && <p>{responseMessage}</p>}
+      {responseMessage && <p className="sucessform">{responseMessage}</p>}
     </form>
   );
 };

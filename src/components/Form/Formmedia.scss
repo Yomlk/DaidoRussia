@@ -1,3 +1,11 @@
+@media screen and (min-width: 20px) and (max-width: 931px) {
+    .FormFull{
+        height: auto;
+      }
+      
+}
+
+
 @media screen and (min-width: 20px) and (max-width: 531px) {
    
     .form-input {
@@ -9,6 +17,9 @@
       transition: border-color 0.3s ease; /* Плавный переход цвета обводки */
       outline: none;
       box-sizing: border-box;
+      }
+      .FormFull{
+        height: auto;
       }
      
      

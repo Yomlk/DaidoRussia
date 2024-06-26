@@ -39,6 +39,7 @@ const Video = () => {
   };
 
   return (
+    <section className="Videosection">
     <div className="BlkVideo">
       <div className="video-view">
         <video
@@ -116,6 +117,7 @@ const Video = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

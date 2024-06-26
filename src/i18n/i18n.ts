@@ -13,12 +13,25 @@ i18n
    resources:{
     en:{
           translation:{
-             namecompany:"DAIDO METALL RUSSIA"
+             namecompany:"DAIDO METALL RUSSIA",
+             nav: {
+                "о компании": "About Us",
+                "продукция": "Products",
+                "проверка подлинности": "Authenticity Check",
+                "контакты": "Contacts",
+              },
            } 
     },
     ru:{
         translation:{
-            namecompany:"ДАЙДО МЕТАЛЛ РУСЬ"
+            namecompany:"ДАЙДО МЕТАЛЛ РУСЬ",
+            nav: {
+                "о компании": "О компании",
+                "продукция": "Продукция",
+                "проверка подлинности": "Проверка подлинности",
+                "контакты": "Контакты",
+              },
+            
           } 
     }
    }

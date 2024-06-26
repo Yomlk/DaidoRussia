@@ -1,12 +1,15 @@
+.Formsection{
+  background-color: rgb(250, 250, 250);
+}
 .form-group {
     margin-bottom: 10px; /* Расстояние между полями формы */
   }
   
   .form-group .label-container {
-    display: flex; /* Используем flexbox для размещения метки и ошибки в одну строку */
-    justify-content: space-between; /* Размещаем метку и ошибку по краям */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    margin-bottom: 5px; /* Расстояние между текстом метки и полем ввода */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 5px; 
   }
   
   .label-text {
@@ -16,11 +19,11 @@
   
   .form-input {
     width: 460px;
-  padding: 15px; /* Поля вокруг текста внутри поля ввода */
+  padding: 15px; 
   font-size: 14px;
-  border: 1px solid black; /* Обводка поля ввода */
-  border-radius: 8px; /* Закругление углов поля ввода */
-  transition: border-color 0.3s ease; /* Плавный переход цвета обводки */
+  border: 1px solid black; 
+  border-radius: 8px; 
+  transition: border-color 0.3s ease; 
   outline: none;
   box-sizing: border-box;
   
@@ -69,7 +72,7 @@
   
   .FormFull {
     max-width: 1400px;
-   height: auto;
+   height: 789px;
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
@@ -92,3 +95,28 @@ input:-webkit-autofill:hover {
   box-shadow: 0 0 0 30px white inset; /* Пример переопределения фона */
   -webkit-text-fill-color: black; /* Цвет текста */
 }
+#message{
+  font-family: Roboto-regular;
+}
+#phone{
+  font-family: Roboto-regular;
+}
+#city{
+  font-family: Roboto-regular;
+}
+#email{
+  font-family: Roboto-regular;
+}
+#name{
+  font-family: Roboto-regular;
+}
+.sucessform{
+  display: flex;
+  justify-content: center;
+  color: green;
+  font-family: Roboto-regular;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+

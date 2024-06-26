@@ -1,3 +1,4 @@
+/*
 @media screen and (min-width: 20px) and (max-width: 991px) {
     .CheckCards{
         flex-direction: column;
@@ -29,3 +30,33 @@
         height: auto;
     }
 }
+    */
+    @media screen and (min-width: 20px) and (max-width: 1110px) {
+        .CheckCard{
+           flex-wrap: wrap;
+           justify-content: center;
+        }
+        .CheckBlk{
+            height: auto;
+        }
+        .CheckCardFirst{
+            height: auto;
+        }
+        .CheckCardSecond{
+            height: auto;
+        }
+        .CheckCardButton{
+            margin-bottom: 30px;
+        }
+        .Links{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .stikprivacy{
+            margin-bottom: 97px;
+            width: 250px;
+        }
+        
+       
+    }

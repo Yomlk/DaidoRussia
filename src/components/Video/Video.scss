@@ -1,4 +1,7 @@
 
+.Videosection{
+  background-color: rgb(250, 250, 250);
+}
 .BlkVideo{
     max-width: 1400px;
     height: 600px;
@@ -9,8 +12,10 @@
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
+    
    
 }
+
 .video-view{
     position: relative;
     width: 572px;
@@ -53,6 +58,7 @@
     font-family: Roboto-Medium;
     font-size: 40px;
     margin-bottom: 0;
+    font-weight: normal;
     
   }
   .AboutText{
@@ -60,6 +66,7 @@
     font-size: 18px;
     margin-bottom: 0;
     height: 52px;
+    
     
   }
   .AboutTextBot{

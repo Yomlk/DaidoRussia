@@ -5,7 +5,8 @@ import "./Formmedia.scss";
 const FormBlk = () => {
   return (
     <>
-      <section className="FormFull">
+    <section className="Formsection">
+      <div className="FormFull">
         <div className="Formheader">
           <h2 className="FormText">
             Если Вас заинтересовала информация или возникли вопросы, отправьте
@@ -15,6 +16,7 @@ const FormBlk = () => {
         <div className="FormCenter">
           <Form />
         </div>
+      </div>
       </section>
     </>
   );

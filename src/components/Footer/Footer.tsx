@@ -4,7 +4,7 @@ import "./footermedia.scss";
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className="Footsection">
         <div className="footBlk">
           <div className="firstfooter">
             <div className="FirstFooterText">

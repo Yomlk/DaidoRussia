@@ -1,4 +1,4 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+/*
 .Check{
     height: 1112px;
     max-width: 1400px;
@@ -115,3 +115,124 @@
     
     
 }
+    */
+.PrivacyBlock{
+    background-color: #5284E4;
+}
+.CheckBlk{
+    max-width: 1400px;
+    height: 1490px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.CheckHeader{
+    display: flex;
+    justify-content: center;
+    
+}
+.CheckHeaderZag{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: Roboto-Medium;
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+}
+.CheckHeaderDist{
+    display: flex;
+    justify-content: center;
+}
+.CheckHeaderText{
+    text-align: center;
+    margin-top: 0;
+    font-family: Roboto-regular;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 50px;
+    .CheckHeaderSpan{
+        font-family: Roboto-Medium;
+    }
+}
+.CheckCard{
+    display: flex;
+    margin: auto;
+    max-width: 1400px;
+    width: 100%;
+    gap: 30px;
+    
+    justify-content: space-between;
+    
+
+}
+.CheckCards{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+}
+.CheckCardFirst{
+    max-width: 645px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.CheckCardImg{
+    width: 100px;
+    height: 69px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.CheckCardText{
+    text-align: center;
+    font-family: Roboto-regular;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.CheckCardButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+.Links{
+    text-decoration: underline;
+    color: #003466;
+}
+.CheckCardSecond{
+    max-width: 645px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    height: 400px;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.CheckCardSecondHeader{
+    text-align: center;
+    font-family: Roboto-Medium;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.CheckCardSecondText{
+    text-align: center;
+    font-family: Roboto-regular;
+    font-size: 28px;
+
+}
+.Sticker{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
