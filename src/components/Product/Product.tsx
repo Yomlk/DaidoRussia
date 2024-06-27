@@ -1,60 +1,68 @@
 import ProductButton from "../Buttons/ProductButton";
+import { useTranslation } from "react-i18next";
 import "./Product.scss";
 import "./ProductMedia.scss";
 
 interface ImageData {
   imageUrl: string;
-  text: string;
+  textKey: string;
 }
-const ImageWithText: React.FC<ImageData> = ({ imageUrl, text }) => (
-  <div className="ProductList">
-    <img className="image" src={imageUrl} alt="image" />
-    <p className="ProductText">{text}</p>
-  </div>
-);
+
+const ImageWithText: React.FC<ImageData> = ({ imageUrl, textKey }) => {
+  const { t } = useTranslation();
+  return (
+    <div className="ProductList">
+      <img className="image" src={imageUrl} alt="image" />
+      <p className="ProductText">{t(`products.items.${textKey}`)}</p>
+    </div>
+  );
+};
+
 const Product: React.FC = () => {
+  const { t } = useTranslation();
   const images: ImageData[] = [
     {
       imageUrl: "./src/components/Product/img/Vesta.png",
-      text: "Lada Vesta",
+      textKey: "lada_vesta",
     },
     {
       imageUrl: "./src/components/Product/img/GAZNEXT.svg",
-      text: "ГАЗель Next",
+      textKey: "gaz_next",
     },
     {
       imageUrl: "./src/components/Product/img/PAZ.png",
-      text: "ПАЗ",
+      textKey: "paz",
     },
     {
       imageUrl: "./src/components/Product/img/Chevrolet.png",
-      text: "Chevrolet",
+      textKey: "chevrolet",
     },
   ];
+
   const handleButtonClick = () => {
-    
     const pdfUrl = "src/components/Swiperblk/catalog_2023.pdf";
-    window.open(pdfUrl, '_blank'); 
+    window.open(pdfUrl, "_blank");
   };
+
   return (
     <section className="productsection">
-    <div className="Product">
-      <div className="ProductMainBlk">
-        <p className="ProductMainText">Наша продукция</p>
+      <div className="Product">
+        <div className="ProductMainBlk">
+          <p className="ProductMainText">{t("products.title")}</p>
+        </div>
+        <div className="Row ProductContainer">
+          {images.map((image, index) => (
+            <ImageWithText
+              key={index}
+              imageUrl={image.imageUrl}
+              textKey={image.textKey}
+            />
+          ))}
+        </div>
+        <div className="ProductButton">
+          <ProductButton onClick={handleButtonClick} btnkey="productButton" />
+        </div>
       </div>
-      <div className="Row ProductContainer">
-        {images.map((image, index) => (
-          <ImageWithText
-            key={index}
-            imageUrl={image.imageUrl}
-            text={image.text}
-          />
-        ))}
-      </div>
-      <div className="ProductButton">
-        <ProductButton onClick={handleButtonClick}/>
-      </div>
-    </div>
     </section>
   );
 };

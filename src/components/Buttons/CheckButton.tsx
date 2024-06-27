@@ -1,13 +1,20 @@
 import classes from "./stylebuttons.module.scss";
-
-const CheckButton =() => {
+import { useTranslation } from "react-i18next";
+interface CheckButtonProps {
+  btnkey: string;
+  onClick: () => void;
+}
+const CheckButton: React.FC<CheckButtonProps> = ({ btnkey, onClick }) => {
+  const { t } = useTranslation();
   return (
     <>
-      <button className={classes.buttonvideo}>
-        <span className={classes.TextButtonVideo}>Проверить</span>
+      <button className={classes.buttonvideo} onClick={onClick}>
+        <span className={classes.TextButtonVideo}>
+          {t(`buttons.${btnkey}`)}
+        </span>
       </button>
     </>
   );
-}
+};
 
 export default CheckButton;

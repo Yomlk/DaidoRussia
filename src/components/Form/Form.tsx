@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Form.scss";
 import "./Formmedia.scss";
 import FormButton from "../Buttons/FormButton";
+import { useTranslation } from "react-i18next";
 
 interface FormData {
   name: string;
@@ -21,6 +22,8 @@ interface FormErrors {
 }
 
 const Form: React.FC = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -50,19 +53,19 @@ const Form: React.FC = () => {
     const errors: FormErrors = {};
 
     if (!formData.name) {
-      errors.name = "Имя обязательно для заполнения";
+      errors.name = t("form.nameRequired");
     }
     if (!formData.email) {
-      errors.email = "Электронная почта обязательна для заполнения";
+      errors.email = t("form.emailRequired");
     }
     if (!formData.phone) {
-      errors.phone = "Телефон обязателен для заполнения";
+      errors.phone = t("form.phoneRequired");
     }
     if (!formData.city) {
-      errors.city = "Край, область, республика обязательны для заполнения";
+      errors.city = t("form.cityRequired");
     }
     if (!formData.message) {
-      errors.message = "Сообщение обязательно для заполнения";
+      errors.message = t("form.messageRequired");
     }
 
     setFormErrors(errors);
@@ -77,11 +80,16 @@ const Form: React.FC = () => {
     }
     try {
       const response = await axios.post("/api/submit", formData);
-      setResponseMessage(`Форма успешна отправлена: ${response.data.message}`);
+
+      setResponseMessage(
+        t("form.formSubmittedSuccess", { message: response.data.message }),
+      );
     } catch (error: any) {
       console.error("Error during form submission:", error);
       setResponseMessage(
-        `Error: ${error.response?.data?.message || error.message}`,
+        t("form.formSubmitError", {
+          errorMessage: error.response?.data?.message || error.message,
+        }),
       );
     }
   };
@@ -95,89 +103,101 @@ const Form: React.FC = () => {
       <div className="form-group">
         <div className="err">
           <label htmlFor="name" className="label-text">
-            Имя:
+            {t("form.name")}
           </label>
           {formErrors.name && <p className="error">{formErrors.name}</p>}
         </div>
         <input
-          className={`${getInputClassName("name")} ${formData.name && !formErrors.name ? "valid" : ""}`}
+          className={`${getInputClassName("name")} ${
+            formData.name && !formErrors.name ? "valid" : ""
+          }`}
           type="text"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="Контактное лицо:"
+          placeholder={t("form.name")}
         />
       </div>
       <div className="form-group">
         <div className="err">
           <label htmlFor="email" className="label-text">
-            E-mail:
+            {t("form.email")}
           </label>
           {formErrors.email && <p className="error">{formErrors.email}</p>}
         </div>
         <input
-          className={`${getInputClassName("email")} ${formData.email && !formErrors.email ? "valid" : ""}`}
+          className={`${getInputClassName("email")} ${
+            formData.email && !formErrors.email ? "valid" : ""
+          }`}
           type="email"
           id="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="E-mail:"
+          placeholder={t("form.email")}
         />
       </div>
       <div className="form-group">
         <div className="err">
           <label htmlFor="phone" className="label-text">
-            Телефон:
+            {t("form.phone")}
           </label>
           {formErrors.phone && <p className="error">{formErrors.phone}</p>}
         </div>
         <input
-          className={`${getInputClassName("phone")} ${formData.phone && !formErrors.phone ? "valid" : ""}`}
+          className={`${getInputClassName("phone")} ${
+            formData.phone && !formErrors.phone ? "valid" : ""
+          }`}
           type="tel"
           id="phone"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="Телефон:"
+          placeholder={t("form.phone")}
         />
       </div>
       <div className="form-group">
         <div className="err">
           <label htmlFor="city" className="label-text">
-            Край, область, республика:
+            {t("form.city")}
           </label>
           {formErrors.city && <p className="error">{formErrors.city}</p>}
         </div>
         <input
-          className={`${getInputClassName("city")} ${formData.city && !formErrors.city ? "valid" : ""}`}
+          className={`${getInputClassName("city")} ${
+            formData.city && !formErrors.city ? "valid" : ""
+          }`}
           type="text"
           id="city"
           name="city"
           value={formData.city}
           onChange={handleChange}
-          placeholder="Край, область, республика:"
+          placeholder={t("form.city")}
         />
       </div>
       <div className="form-group">
         <div className="err">
           <label htmlFor="message" className="label-text">
-            Сообщение:
+            {t("form.message")}
           </label>
           {formErrors.message && <p className="error">{formErrors.message}</p>}
         </div>
         <textarea
-          className={`${getInputClassName("message")} ${formData.message && !formErrors.message ? "valid" : ""}`}
+          className={`${getInputClassName("message")} ${
+            formData.message && !formErrors.message ? "valid" : ""
+          }`}
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Введите сообщение..."
+          placeholder={t("form.message")}
         />
       </div>
       <div className="form-btn">
-        <div className="btnform"><FormButton /></div>
+        <div className="btnform">
+          <FormButton btnkey="btnform" />
+        </div>
       </div>
       {responseMessage && <p className="sucessform">{responseMessage}</p>}
     </form>

@@ -4,8 +4,6 @@ import "./media.scss";
 import "./style.scss";
 import LanguageSelector from "../languages/languageselector";
 
-
-
 interface HeaderProps {
   logo: string;
   nameCompany: string;
@@ -16,15 +14,11 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({
   logo,
-  
+
   navItems,
-  
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [, setIsSmallScreen] = useState(window.innerWidth < 500);
-  
- 
-  
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,21 +36,18 @@ const Header: React.FC<HeaderProps> = ({
     setIsMenuOpen(!isMenuOpen);
   };
 
-
   const handleNavClick = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false);
     }
   };
-  
-  const {t} = useTranslation();
- 
+
+  const { t } = useTranslation();
 
   return (
     <header className="header">
-      
       <div className="headerBlk">
         <div className="burger-menu" onClick={toggleMenu}>
           <div className="burger-bar"></div>
@@ -67,27 +58,26 @@ const Header: React.FC<HeaderProps> = ({
           <img src={logo} alt="Logo" />
         </div>
         <div className="NameCompany">
-            
           <p className="NameCompanyText">{t("namecompany")}</p>
         </div>
         <nav className={`nav-menu ${isMenuOpen ? "open" : ""}`}>
           <ul>
             {navItems.map((item, index) => (
-              <li key={index} onClick={() => handleNavClick(item.toLowerCase())}>
-                
-                {t(`nav.${item.toLowerCase()}`)}</li>
+              <li
+                key={index}
+                onClick={() => handleNavClick(item.toLowerCase())}
+              >
+                {t(`nav.${item.toLowerCase()}`)}
+              </li>
             ))}
           </ul>
         </nav>
         <div className="buttons">
           <button className="image-button">
-          <LanguageSelector />
+            <LanguageSelector />
           </button>
-          
-          
         </div>
       </div>
-      
     </header>
   );
 };

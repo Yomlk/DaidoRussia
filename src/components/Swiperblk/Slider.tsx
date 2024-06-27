@@ -4,18 +4,21 @@ const Slider: React.FC = () => {
   const slides = [
     {
       image: "src/components/Swiperblk/img/Banner1.svg",
-      text: "Втулки верхней головки шатуна для двигателей КАМАЗ",
-      pdfUrl:"src/components/Swiperblk/catalog_2023.pdf",
+      text: "ru_key_1",
+      pdfUrl: "src/components/Swiperblk/catalog_2023.pdf",
+      buttonTextKey: "btnkey_1",
     },
     {
       image: "src/components/Swiperblk/img/Banner2.svg",
-      text: "Втулки верхней головки шатуна для двигателей ММЗ",
-      pdfUrl:"src/components/Swiperblk/catalog_2023.pdf",
+      text: "ru_key_2",
+      pdfUrl: "src/components/Swiperblk/catalog_2023.pdf",
+      buttonTextKey: "btnkey_2",
     },
     {
       image: "src/components/Swiperblk/img/Banner3.svg",
-      text: "Коренные и шатунные вкладыши для двигаталей КАМАЗ",
-      pdfUrl:"src/components/Swiperblk/catalog_2023.pdf",
+      text: "ru_key_3",
+      pdfUrl: "src/components/Swiperblk/catalog_2023.pdf",
+      buttonTextKey: "btnkey_3",
     },
   ];
 

@@ -1,10 +1,11 @@
 import { useRef, useState, useEffect } from "react";
 import VideoButton from "../Buttons/VideoButton";
-
+import { useTranslation } from "react-i18next";
 import "./Video.scss";
 import "./media.scss";
 
 const Video = () => {
+  const { t } = useTranslation();
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [buttonVisible, setButtonVisible] = useState(true);
   const [isOpen, setOpen] = useState(false);
@@ -40,85 +41,61 @@ const Video = () => {
 
   return (
     <section className="Videosection">
-    <div className="BlkVideo">
-      <div className="video-view">
-        <video
-          ref={videoRef}
-          className="video"
-          controls
-          src="./src/components/Video/Video.mp4"
-          poster="./src/components/Video/img/videoOBl.PNG"
-          width="100%"
-        >
-          <p>
-            Ваш браузер не поддерживает встроенные видео. Попробуйте посмотреть
-            его по
-            <a href="http://daidorussia.ru/data/pages/video/files/v2.2%20RUS.mp4">
-              этой ссылке
-            </a>
-            .
-          </p>
-        </video>
-        <div className="video-content">
-          {buttonVisible && (
-            <button
-              className="PlayButton"
-              onClick={handlePlayButtonClick}
-            ></button>
-          )}
+      <div className="BlkVideo">
+        <div className="video-view">
+          <video
+            ref={videoRef}
+            className="video"
+            controls
+            src="./src/components/Video/Video.mp4"
+            poster="./src/components/Video/img/videoOBl.PNG"
+            width="100%"
+          >
+            <p>
+              {t("video.videoNotSupported")}{" "}
+              <a href="http://daidorussia.ru/data/pages/video/files/v2.2%20RUS.mp4"></a>
+              .
+            </p>
+          </video>
+          <div className="video-content">
+            {buttonVisible && (
+              <button
+                className="PlayButton"
+                onClick={handlePlayButtonClick}
+              ></button>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="RightSide">
-        <div className="Text">
-          <h2 className="About">О компании</h2>
-          <p className="AboutText">
-            <span className="Bold">ООО «Дайдо Металл Русь»</span> - крупнейший
-            поставщик подшипников скольжения для сборочных конвейеров в России и
-            странах СНГ.
-          </p>
-          <p className="AboutTextBot">
-            Наличие полного цикла производства и высокотехнологичного
-            оборудования позволяет выпускать широкий ассортимент продукции для
-            бензиновых, дизельных двигателей и компрессоров:
-            <br />
-            - коренные и шатунные вкладыши;
-            <br />
-            - упорные полукольца;
-            <br />- втулки.
-          </p>
-        </div>
-        <div className="VideoBtn">
-          <div className="drop">
-            <div className="menu-button" onClick={() => setOpen(!isOpen)}>
-              <VideoButton />
-            </div>
-            <div className={`menu ${isOpen ? "active" : ""}`}>
-              <div className="menu__list">
-                <p className="menu__item">
-                  История предприятия началась в 1959 году когда в составе
-                  «Заволжского моторного завода» было начато производство
-                  подшипников скольжения. В 2003 году на базе производства было
-                  создано ООО «ЗМЗ-Подшипники скольжения», тем самым "Заволжский
-                  моторный завод" (ЗМЗ) полностью утратил возможность
-                  производства биметаллической ленты и вкладышей. В 2007 году
-                  предприятие перешло в собственность компании "Daido Metal Co.,
-                  LTD, Япония и получило новое название ООО «Дайдо Металл Русь».
-                  Исследовательская и испытательная база, японская система
-                  управления и новейшее оборудование позволяют выпускать
-                  ЗАВОЛЖСКИЕ ВКЛАДЫШИ стабильно высокого качества, удовлетворять
-                  все новые потребности рынка, гарантируя БЕЗУПРЕЧНОСТЬ В
-                  ИСПОЛНЕНИИ всей производимой номенклатуры. Система управления
-                  предприятием сертифицирована на соответствие IATF 16949, ISO
-                  9001 и ГОСТ Р ИСО 14001:2007.
-                </p>
+        <div className="RightSide">
+          <div className="Text">
+            <h2 className="About">{t("video.sectionTitle")}</h2>
+            <p
+              className="AboutText"
+              dangerouslySetInnerHTML={{
+                __html: t("video.companyDescription"),
+              }}
+            ></p>
+            <p
+              className="AboutTextBot"
+              dangerouslySetInnerHTML={{ __html: t("video.companyDetails") }}
+            ></p>
+          </div>
+          <div className="VideoBtn">
+            <div className="drop">
+              <div className="menu-button" onClick={() => setOpen(!isOpen)}>
+                <VideoButton btnkey="videoButton" />
+              </div>
+              <div className={`menu ${isOpen ? "active" : ""}`}>
+                <div className="menu__list">
+                  <p className="menu__item">{t("video.companyHistory")}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
   );
-}
+};
 
 export default Video;
