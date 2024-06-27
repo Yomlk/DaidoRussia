@@ -1,0 +1,96 @@
+{
+    "namecompany": "DAIDO METALL RUSSIA",
+    "nav": {
+      "о компании": "About Us",
+      "продукция": "Products",
+      "проверка подлинности": "Authenticity Check",
+      "контакты": "Contacts"
+    },
+    "text":{
+    "ru_key_1":"Bushings of the upper connecting rod heads for KAMAZ engines",
+    "ru_key_2":"Bushings for the upper connecting rod head for MMZ engines",
+    "ru_key_3":"Main and connecting rod bearings for KAMAZ engines"
+  },
+   "buttons":{
+     "btnkey_1":"Catalog",
+     "btnkey_2":"Catalog",
+     "btnkey_3":"Catalog",
+     "videoButton":"Read more",
+     "productButton": "Production",
+     "checkbtn":"Check",
+     "btnform":"Submit"
+    },
+    "video": {
+    "sectionTitle": "About Us",
+    "companyName": "DAIDO METALL RUSSIA",
+    "companyDescription": "<span class='Bold'>DAIDO METALL RUSSIA</span> - the largest supplier of sliding bearings for assembly conveyors in Russia and the CIS countries.",
+    "companyDetails": "The presence of a full production cycle and high-tech equipment allows producing a wide range of products for gasoline, diesel engines, and compressors: <br /> - main and connecting rod bearings; <br /> - thrust washers; <br /> - bushings.",
+    "companyHistory": "The history of the enterprise began in 1959 when the production of sliding bearings was started as part of the 'Zavolzhsky Motor Factory'. In 2003, on the basis of production, LLC 'ZMZ-Sliding Bearings' was created, thereby the 'Zavolzhsky Motor Plant' (ZMZ) completely lost the ability to produce bimetallic tape and inserts. In 2007, the enterprise was acquired by 'Daido Metal Co., LTD, Japan' and received a new name - LLC 'DAIDO METALL RUSSIA'. The research and testing base, the Japanese management system, and the latest equipment make it possible to produce high-quality ZAVOLZHSKY BEARINGS, meet all new market needs, guaranteeing the PERFECTION IN EXECUTION of the entire range of products. The enterprise management system is certified for compliance with IATF 16949, ISO 9001, and GOST R ISO 14001:2007.",
+    "videoNotSupported":"Video Not Supported"
+  },
+  "products": {
+    "title": "Our Products",
+    "items": {
+      "lada_vesta": "Lada Vesta",
+      "gaz_next": "GAZelle Next",
+      "paz": "PAZ",
+      "chevrolet": "Chevrolet"
+    }
+  },
+  "check": {
+    "header": "Authenticity Check",
+    "dearCustomers": "Dear Customers!",
+    "systemChange": "The authenticity verification system at DAIDO METALL RUSSIA has been updated. Depending on the information on the sticker, please choose one of the following options:",
+    "option1": {
+      "phone": "+79101052000",
+      "website": "www.daidorussia.ru",
+      "text": "If the sticker shows the phone number +79101052000 and the website"
+    },
+    "option2": {
+      "phone": "2420",
+      "website": "www.original.su",
+      "text": "If the sticker shows the phone number 2420 and the website"
+    },
+    "otherWays":"Other verification methods",
+    "otherWays1": "Send an SMS with the code to +79101052000.",
+    "otherWays2": "Call the call center at +7(83161) 21231, call center hours: Mon-Fri from 8:15 to 17:00.",
+    "otherWays3": "Leave a message on the website",
+    "otherWays4": "Send an SMS with the code to 2420.",
+    "otherWays5": "Call the 24/7 call center at 8-800-555-00-95, call center hours: Mon-Fri from 8:15 to 17:00."
+  },
+  "form": {
+    "formheader":"If you are interested in information or have any questions, please send us a message:",
+    "name": "Name:",
+    "email": "E-mail:",
+    "phone": "Phone:",
+    "city": "Region, State, Republic:",
+    "message": "Message:",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "phoneRequired": "Phone number is required",
+    "cityRequired": "Region, state, republic is required",
+    "messageRequired": "Message is required",
+    "formSubmittedSuccess": "Form submitted successfully: {{ message }}",
+    "formSubmitError": "Error during form submission: {{ errorMessage }}"
+  },
+  "Map":"Our location",
+  "footer":{
+    "h3":"CEO",
+    "reg1":"tel: 8(831-61)2-12-30",
+    "reg2":"fax:7-63-25",
+    "first1":"Head of department",
+    "first2":"tel: 8(831-61)3-77-89",
+    "first3":"fax:2-12-33, 7-63-23",
+    "sec1":"Head of Purchasing Department:",
+    "sec2":"tel: 8(831-61)2-12-32",
+    "sec3":"fax:2-12-33, 7-63-23",
+    "kat1":"Head of Quality Department:",
+    "kat2":"tel: 8(831-61)2-12-30 (add.150)",
+    "kat3":"© 2009, DAIDO METALL RUSSIA"
+
+
+    
+
+  }
+    
+  }
