@@ -36,7 +36,7 @@ const Footer = () => {
                 <p className="textFootPrivacy">{t("footer.kat3")}</p>
               </div>
               <div className="logo">
-                <img src="./public/img/Footer/footer.png" alt="" />
+                <img src="/images/Footer/footer.png" alt="" />
               </div>
             </div>
           </div>
