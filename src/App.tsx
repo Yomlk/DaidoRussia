@@ -27,26 +27,23 @@ const App = () => {
   return (
     <>
       <Header
-        logo="./src/components/Header/img/logo.png"
-        nameCompany="ДАЙДО МЕТАЛЛ РУСЬ"
-        navItems={navItems}
-        button1Image="./src/components/Header/img/rus.svg"
-        button2Image="./src/components/Header/img/usa.svg"
+        logo="./public/img/Header/logo.png"
+        navItems={navItems} 
       />
 
       <Slider />
-      <div id="о компании">
+      <section id="о компании">
         <Video />
-      </div>
+      </section>
 
-      <div id="продукция"></div>
-      <Product />
-      <div id="проверка подлинности"></div>
-      <Check />
+      <section id="продукция"><Product /></section>
+      
+      <section id="проверка подлинности"><Check /></section>
+      
       <FormBlk />
       <Map />
-      <div id="контакты"></div>
-      <Footer />
+      <footer id="контакты"><Footer /></footer>
+      
     </>
   );
 };

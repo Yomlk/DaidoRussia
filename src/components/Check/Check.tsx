@@ -10,7 +10,7 @@ const Check = () => {
   };
   return (
     <>
-      <section className="PrivacyBlock">
+      <div className="PrivacyBlock">
         <div className="CheckBlk">
           <div className="CheckHeader">
             <h2 className="CheckHeaderZag">{t("check.header")}</h2>
@@ -30,7 +30,7 @@ const Check = () => {
               <div className="CheckCardFirst">
                 <img
                   className="CheckCardImg"
-                  src="./src/components/Check/img/logo.png"
+                  src="./public/img/Check/logo.png"
                   alt=""
                 />
                 <p className="CheckCardText">
@@ -51,7 +51,7 @@ const Check = () => {
               <div className="CheckCardFirst">
                 <img
                   className="CheckCardImg"
-                  src="./src/components/Check/img/logo.png"
+                  src="./public/img/Check/logo.png"
                   alt=""
                 />
                 <p className="CheckCardText">
@@ -104,12 +104,12 @@ const Check = () => {
           <div className="Sticker">
             <img
               className="stikprivacy"
-              src="./src/components/Check/img/Stiker.png"
+              src="././public/img/Check/Stiker.png"
               alt=""
             />
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

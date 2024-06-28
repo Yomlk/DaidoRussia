@@ -6,10 +6,9 @@ import LanguageSelector from "../languages/languageselector";
 
 interface HeaderProps {
   logo: string;
-  nameCompany: string;
+ 
   navItems: string[];
-  button1Image: string;
-  button2Image: string;
+  
 }
 
 const Header: React.FC<HeaderProps> = ({

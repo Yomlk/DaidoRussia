@@ -22,30 +22,30 @@ const Product: React.FC = () => {
   const { t } = useTranslation();
   const images: ImageData[] = [
     {
-      imageUrl: "./src/components/Product/img/Vesta.png",
+      imageUrl: "./public/img/Product/Vesta.png",
       textKey: "lada_vesta",
     },
     {
-      imageUrl: "./src/components/Product/img/GAZNEXT.svg",
+      imageUrl: "./public/img/Product/GAZNEXT.svg",
       textKey: "gaz_next",
     },
     {
-      imageUrl: "./src/components/Product/img/PAZ.png",
+      imageUrl: "./public/img/Product/PAZ.png",
       textKey: "paz",
     },
     {
-      imageUrl: "./src/components/Product/img/Chevrolet.png",
+      imageUrl: "./public/img/Product/Chevrolet.png",
       textKey: "chevrolet",
     },
   ];
 
   const handleButtonClick = () => {
-    const pdfUrl = "src/components/Swiperblk/catalog_2023.pdf";
+    const pdfUrl = "./public/img/Slider/catalog_2023.pdf";
     window.open(pdfUrl, "_blank");
   };
 
   return (
-    <section className="productsection">
+    <div className="productsection">
       <div className="Product">
         <div className="ProductMainBlk">
           <p className="ProductMainText">{t("products.title")}</p>
@@ -63,7 +63,7 @@ const Product: React.FC = () => {
           <ProductButton onClick={handleButtonClick} btnkey="productButton" />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

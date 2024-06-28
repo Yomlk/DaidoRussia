@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <>
-      <footer className="Footsection">
+      <div className="Footsection">
         <div className="footBlk">
           <div className="firstfooter">
             <div className="FirstFooterText">
@@ -36,12 +36,12 @@ const Footer = () => {
                 <p className="textFootPrivacy">{t("footer.kat3")}</p>
               </div>
               <div className="logo">
-                <img src="./src/components/Footer/img/footer.png" alt="" />
+                <img src="./public/img/Footer/footer.png" alt="" />
               </div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
     </>
   );
 };

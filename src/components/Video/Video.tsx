@@ -40,15 +40,15 @@ const Video = () => {
   };
 
   return (
-    <section className="Videosection">
+    <div className="Videosection">
       <div className="BlkVideo">
         <div className="video-view">
           <video
             ref={videoRef}
             className="video"
             controls
-            src="./src/components/Video/Video.mp4"
-            poster="./src/components/Video/img/videoOBl.PNG"
+            src="./public/img/Video/Video.mp4"
+            poster="./public/img/Video/videoOBl.PNG"
             width="100%"
           >
             <p>
@@ -94,7 +94,7 @@ const Video = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
