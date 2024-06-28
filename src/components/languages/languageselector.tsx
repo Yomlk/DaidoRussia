@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import "./lang.scss";
 
 const languages = [
-  { code: "en", lang: "English", image: "./public/img/Header/usa.svg" },
-  { code: "ru", lang: "Russia", image: "./public/img/Header/rus.svg" },
+  { code: "en", lang: "English", image: "/images/Header/usa.svg" },
+  { code: "ru", lang: "Russia", image: "/images/Header/rus.svg" },
 ];
 
 const LanguageSelector: React.FC = () => {

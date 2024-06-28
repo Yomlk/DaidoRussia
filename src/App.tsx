@@ -27,7 +27,7 @@ const App = () => {
   return (
     <>
       <Header
-        logo="./public/img/Header/logo.png"
+        logo="/images/Header/logo.png"
         navItems={navItems} 
       />
 

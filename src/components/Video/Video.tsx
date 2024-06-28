@@ -47,8 +47,8 @@ const Video = () => {
             ref={videoRef}
             className="video"
             controls
-            src="./public/img/Video/Video.mp4"
-            poster="./public/img/Video/videoOBl.PNG"
+            src="/images/Video/Video.mp4"
+            poster="/images/Video/videoOBl.PNG"
             width="100%"
           >
             <p>

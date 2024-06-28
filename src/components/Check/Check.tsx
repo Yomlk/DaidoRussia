@@ -30,7 +30,7 @@ const Check = () => {
               <div className="CheckCardFirst">
                 <img
                   className="CheckCardImg"
-                  src="./public/img/Check/logo.png"
+                  src="/images/Check/logo.png"
                   alt=""
                 />
                 <p className="CheckCardText">
@@ -51,7 +51,7 @@ const Check = () => {
               <div className="CheckCardFirst">
                 <img
                   className="CheckCardImg"
-                  src="./public/img/Check/logo.png"
+                  src="/images/Check/logo.png"
                   alt=""
                 />
                 <p className="CheckCardText">
@@ -104,7 +104,7 @@ const Check = () => {
           <div className="Sticker">
             <img
               className="stikprivacy"
-              src="././public/img/Check/Stiker.png"
+              src="/images/Check/Stiker.png"
               alt=""
             />
           </div>

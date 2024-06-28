@@ -22,25 +22,25 @@ const Product: React.FC = () => {
   const { t } = useTranslation();
   const images: ImageData[] = [
     {
-      imageUrl: "./public/img/Product/Vesta.png",
+      imageUrl: "/images/Product/Vesta.png",
       textKey: "lada_vesta",
     },
     {
-      imageUrl: "./public/img/Product/GAZNEXT.svg",
+      imageUrl: "/images/Product/GAZNEXT.svg",
       textKey: "gaz_next",
     },
     {
-      imageUrl: "./public/img/Product/PAZ.png",
+      imageUrl: "/images/Product/PAZ.png",
       textKey: "paz",
     },
     {
-      imageUrl: "./public/img/Product/Chevrolet.png",
+      imageUrl: "/images/Product/Chevrolet.png",
       textKey: "chevrolet",
     },
   ];
 
   const handleButtonClick = () => {
-    const pdfUrl = "./public/img/Slider/catalog_2023.pdf";
+    const pdfUrl = "/images/Slider/catalog_2023.pdf";
     window.open(pdfUrl, "_blank");
   };
 
